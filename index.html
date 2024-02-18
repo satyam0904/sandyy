@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Idli Date</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  #question {
+    font-size: 24px;
+    margin-top: 50px;
+  }
+  #options {
+    margin-top: 20px;
+  }
+  button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  #yes {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+  }
+  #no {
+    background-color: #f44336;
+    color: white;
+    border: none;
+  }
+  img {
+    display: none;
+    width: 40%;
+    margin: 10px auto;
+  }
+</style>
+</head>
+<body>
+
+<div id="question">
+  Will you go on an idli date with me?
+</div>
+
+<div id="options">
+  <button id="yes" onclick="celebrate('yes')">Yes</button>
+  <button id="no" onclick="celebrate('no')">No</button>
+</div>
+
+<img id="celebration-image" src="/sandyy.gif" alt="Cute Celebrations">
+<img id="no-celebration-image" src="/sad-teddy-bear-sits-night-street-rain-generative-ai_653286-574.avif" alt="No Celebrations">
+
+<script>
+  function celebrate(choice) {
+    if (choice === 'yes') {
+      document.getElementById("celebration-image").style.display = "block";
+      document.getElementById("no-celebration-image").style.display = "none"; // Hide the "No" celebration image if "Yes" is clicked
+    } else {
+      document.getElementById("celebration-image").style.display = "none"; // Hide the "Yes" celebration image if "No" is clicked
+      document.getElementById("no-celebration-image").style.display = "block";
+      sayNo(); // Display the alert message for "No" choice
+    }
+  }
+
+  function sayNo() {
+    alert("NO mt bolo bilkul aese heee udaas ho jauga ");
+  }
+</script>
+
+</body>
+</html>
